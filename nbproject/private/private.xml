@@ -4,8 +4,18 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/BuscaCamposPanel.jfd</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/MainAppView.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/EntidadeBuscarPanel.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/ViewComponent.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/ProfessorAtualizarPanel.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/MainAppFrame.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/model/beans/Endereco.java</file>
             <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/BuscaCamposPanel.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/AlunoBuscarPanel.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/ProfessorCadastrarView.java</file>
             <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/ProfessorCadastrarPanel.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/AlunoAtualizarPanel.java</file>
+            <file>file:/C:/Users/shawn/Documents/NetBeansProjects/JavaApplication2/src/javaapplication1/org/fpij/jitakyoei/view/gui/EnderecoPanel.java</file>
         </group>
     </open-files>
 </project-private>
