@@ -33,69 +33,70 @@ public class AlunoBOTest {
     @BeforeClass
 	public static void setUp(){
         affiliated = new Filiado();
-        affiliated.setId(456465645L);
+        affiliated.setId(123456789L);
         affiliated.setNome("Aluno Equals Teste");
 
         student = new Aluno();
         student.setFiliado(affiliated);
 
-       alunoTest = new AlunoBOImpl(appView());
+        alunoTest = new AlunoBOImpl(appView());
     }
 
     @Test
     public void createAlunoTest() throws Exception {
         alunoTest.createAluno(student);
 
-        Filiado newAffiliated = new Filiado();
+        Filiado novoFiliado = new Filiado();
 
-        Aluno newStudent = new Aluno();
-        newStudent.setFiliado(null);
+        Aluno novoAluno = new Aluno();
+        novoAluno.setFiliado(null);
 
-        Aluno wantedStudent =  alunoTest.searchAluno(student).get(0);
+        Aluno alunoEsperado = alunoTest.searchAluno(student).get(0);
 
-        assertEquals(wantedStudent, student);
-        assertNotEquals(newAffiliated, student);
+        assertEquals(alunoEsperado, student);
+        assertNotEquals(novoFiliado, student);
     }
 
     @Test
     public void updateAlunoTest() throws Exception {
         alunoTest.createAluno(student);
 
-        Aluno alunoReceived = alunoTest.listAll().get(0);
+        Aluno alunoRecebido = alunoTest.listAll().get(0);
 
-        alunoReceived.getFiliado().setNome("Aluno Update Teste");
-        alunoTest.updateAluno(alunoReceived);
+        alunoRecebido.getFiliado().setNome("Aluno Update Teste");
+        alunoTest.updateAluno(alunoRecebido);
 
         assertEquals("Aluno Update Teste", alunoTest.listAll().get(0).getFiliado().getNome());
-        assertNotEquals("Aluno Teste Update invalido", alunoTest.listAll().get(0).getFiliado().getNome());
+        assertNotEquals("Aluno Teste Update inválido", alunoTest.listAll().get(0).getFiliado().getNome());
     }
 
     @Test
     public void createAlunoExceptionTest() throws Exception {
         Aluno aluno = new Aluno();
         aluno.setFiliado(null);
-        
+
         Exception exception = assertThrows(Exception.class, () -> {
             alunoTest.createAluno(aluno);
         });
-        
-        String expectedMessage = "Desculpe, ocorreu um erro desconhecido ao salvar o aluno.";
-        String actualMessage = exception.getMessage();
 
-        assertTrue(actualMessage.contains(expectedMessage));
+        String mensagemEsperada = "Desculpe, ocorreu um erro desconhecido ao salvar o aluno.";
+        String mensagemAtual = exception.getMessage();
+
+        assertTrue(mensagemAtual.contains(mensagemEsperada));
     }
 
     @Test()
     public void updateAlunoExceptionTest() throws Exception {
         Aluno aluno = new Aluno();
-        
+
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             alunoTest.updateAluno(aluno);
         });
-        
-        String expectedMessage = "Ocorreu um erro ao salvar os dados do aluno. Verifique se todos os dados foram preenchidos corretamente!";
-        String actualMessage = exception.getMessage();
 
-        assertTrue(actualMessage.contains(expectedMessage));
-    }   
+        String mensagemEsperada = "Ocorreu um erro ao salvar os dados do aluno. Verifique se todos os dados foram preenchidos corretamente!";
+        String mensagemAtual = exception.getMessage();
+
+        assertTrue(mensagemAtual.contains(mensagemEsperada));
+    }
+
 }
